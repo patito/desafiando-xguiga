@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form - AI Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Send us a message!</p>
+        </header>
+
+        <main>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+
+                <button type="submit" id="submitButton" class="submit-button">
+                    <span class="button-text">Send Message</span>
+                    <span class="loading-spinner" id="loadingSpinner">Sending...</span>
+                </button>
+            </form>
+
+            <div id="responseMessage" class="response-message"></div>
+        </main>
+
+        <footer>
+            <p>Built with ❤️ for the AI Challenge</p>
+            <button id="viewSubmissions" class="view-submissions-button">View All Submissions</button>
+        </footer>
+
+        <div id="submissionsModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>All Submissions</h2>
+                <div id="submissionsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
